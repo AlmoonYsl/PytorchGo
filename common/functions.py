@@ -1,7 +1,7 @@
 import numpy as np
 
 
-# Sigmoid y = 1 / e^(-x)
+# Sigmoid y = 1 / [1 + e^(-x)]
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
@@ -46,7 +46,6 @@ def cross_entropy_error(y, t):
         t = t.argmax(axis=1)
     # the amount of data
     batch_size = y.shape[0]
-    print(y[np.arange(batch_size), t])
     return -np.sum(np.log(y[np.arange(batch_size), t] + 1e-7)) / batch_size
 
 
