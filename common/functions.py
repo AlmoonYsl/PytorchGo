@@ -1,3 +1,4 @@
+# coding: utf-8
 import numpy as np
 
 
@@ -52,6 +53,3 @@ def cross_entropy_error(y, t):
 def soft_max_loss(x, t):
     y = soft_max(x)
     return cross_entropy_error(y, t)
-
-
-

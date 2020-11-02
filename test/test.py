@@ -1,3 +1,4 @@
+# coding: utf-8
 from common.functions import *
 import numpy as np
 

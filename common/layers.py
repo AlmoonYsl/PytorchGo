@@ -1,3 +1,4 @@
+# coding: utf-8
 from common.functions import *
 import numpy as np
 
@@ -68,7 +69,7 @@ class SoftMaxWithLoss:
         self.loss = cross_entropy_error(self.y, self.t)
         return self.loss
 
-    def backward(self, dout):
+    def backward(self):
         batch_size = self.t.shape[0]
         if self.t.size == self.y.size:
             dx = (self.y - self.t) / batch_size
